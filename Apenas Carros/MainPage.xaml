@@ -9,7 +9,7 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <VerticalStackLayout Spacing="10">
-                            <Image Source="logo_porsche" HorizontalOptions="StartAndExpand" ZIndex="1" Margin="20,10,0,0" WidthRequest="100" HeightRequest="100"/>
+                            <Image Source="logo_porsche" HorizontalOptions="StartAndExpand" ZIndex="1" Margin="0,0,0,0" WidthRequest="100" HeightRequest="100"/>
                             <Image Source="{Binding Img}" Margin="0,-40,0,0" Aspect="AspectFill" HeightRequest="200"/>
                             <Label Text="{Binding Name}" Margin="20,0,20,0" FontAttributes="Bold" FontSize="Title"/>
                             <Label Text="{Binding Description}" Margin="20,0,20,0" HorizontalOptions="CenterAndExpand" FontSize="Subtitle"/>
