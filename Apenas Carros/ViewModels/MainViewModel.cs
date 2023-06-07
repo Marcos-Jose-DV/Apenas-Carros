@@ -9,7 +9,10 @@ namespace Apenas_Carros.ViewModels;
 public partial class MainViewModel : ObservableObject
 {
     [ObservableProperty]
-    ObservableCollection<Classicos> classicosCarros;
+    ObservableCollection<ClassicCover> covers;
+
+    [ObservableProperty]
+    ObservableCollection<ClassicCar> cars;
 
     public MainViewModel()
     {
@@ -20,6 +23,7 @@ public partial class MainViewModel : ObservableObject
     {
         var dbContext = new AppDbContext();
 
-        ClassicosCarros = new ObservableCollection<Classicos>(dbContext.Classic);
+        Covers = new ObservableCollection<ClassicCover>(dbContext.ClassicCovers);
+        Cars = new ObservableCollection<ClassicCar>(dbContext.ClassicCars);
     }
 }
