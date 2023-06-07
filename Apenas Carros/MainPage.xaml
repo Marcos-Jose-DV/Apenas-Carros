@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Apenas_Carros.MainPage"
+             Shell.NavBarIsVisible="False">
+    <ScrollView Margin="0,20,0,0">
+        <StackLayout>
+            <Grid RowDefinitions="Auto">
+                <CollectionView ItemsSource="{Binding ClassicosCarros}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <Grid RowDefinitions="Auto,Auto,Auto,Auto" RowSpacing="10" >
+                                    <Image Grid.Row="0" Source="logo_porsche" HorizontalOptions="StartAndExpand" ZIndex="1" Margin="20,10,0,0" WidthRequest="100" HeightRequest="100"/>
+                                    <Image Grid.Row="1" Source="{Binding ImgCapa}" Margin="0,-40,0,0" Aspect="AspectFill" HeightRequest="200"/>
+                                    <Label Grid.Row="2" Text="{Binding NameCapa}" Margin="10" FontAttributes="Bold" FontSize="Title"/>
+                                    <Label Grid.Row="3" Text="{Binding DescriptionCapa}" Margin="10" FontSize="Subtitle"/>
+                                </Grid>
+                                <!--<Grid>
+                                    <TableView Intent="Menu" >
+                                        <TableRoot>
+                                            <TableSection Title="Versões do modelo">
+                                                <ImageCell Text="{Binding NameTitle}"
+                                                Detail="{Binding Description}"
+                                                ImageSource="porschea" />
+                                            </TableSection>
+                                        </TableRoot>
+                                    </TableView>
+                                </Grid>-->
+
+
+
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </Grid>
+
+            <Label Text="Versões do modelo" FontSize="Title" FontAttributes="Bold" Margin="10,20,0,0"/>
+            <Grid Margin="10">
+                <CarouselView                     
+                    ItemsSource="{Binding ClassicosCarros}"
+                   
+                    Loop="True">
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto" ColumnSpacing="10" RowSpacing="10">
+                                <Frame Padding="0" HasShadow="True">
+                                    <Image 
+                                    Aspect="AspectFill"
+                                    Source="{Binding Img}"/>
+                                </Frame>
+                                <Label Grid.Column="1" Text="{Binding NameTitle}" FontSize="20" />
+                                <Label Grid.Row="1" Grid.ColumnSpan="2" Text="{Binding Description}" FontSize="Subtitle"/>
+                            </Grid>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+
+                <!--<IndicatorView--> 
+                    <!--x:Name="IndicatorView" 
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" 
+                    Margin="0" IndicatorColor="Beige" 
+                    IndicatorSize="8" 
+                    IndicatorsShape="Circle" 
+                    SelectedIndicatorColor="#ea7550"/>-->
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
