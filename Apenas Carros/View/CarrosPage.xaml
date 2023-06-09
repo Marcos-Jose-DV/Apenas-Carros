@@ -10,10 +10,10 @@
             <CarouselView.ItemTemplate>
                 <DataTemplate>
                     <Grid RowDefinitions="Auto, Auto, Auto" ColumnDefinitions="Auto,Auto">
-                        <Label Grid.Row="0" Grid.ColumnSpan="2" Text="{Binding Name}"  TextColor="White"/>
-                        <Image Grid.Row="1" Grid.ColumnSpan="2" Margin="50,0,0,0" Source="{Binding ImgCar}" WidthRequest="300" HeightRequest="200"/>
-                        <Label Grid.Row="2" Text="{Binding Detalhes1}" TextColor="White"/>
-                        <Label Grid.Row="2" Grid.Column="1" Text="{Binding Detalhes2}" TextColor="White"/>
+                        <Label Grid.Row="0" Grid.ColumnSpan="2" Margin="70,20,0,0" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" Text="{Binding Name}"  TextColor="White"/>
+                        <Image Grid.Row="0" Grid.ColumnSpan="2" Margin="50,15,0,0" Source="{Binding ImgCar}" WidthRequest="300" HeightRequest="200"/>
+                        <Label Grid.Row="1" Margin="40,-30,0,0" Text="{Binding Detalhes1}" TextColor="White"/>
+                        <Label Grid.Row="1" Grid.Column="1" Margin="0,-30,50,0" HorizontalOptions="End" Text="{Binding Detalhes2}" TextColor="White"/>
                     </Grid>
                 </DataTemplate>
             </CarouselView.ItemTemplate>
