@@ -7,6 +7,7 @@ public class AppDbContext : DbContext
 {
     public DbSet<ClassicCover> ClassicCovers { get; set; }
     public DbSet<ClassicCar> ClassicCars { get; set; }
+    public DbSet<Porsche> Porsches { get; set; }    
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
@@ -65,6 +66,10 @@ public class AppDbContext : DbContext
                 "356 1500 (1952)",
                 "Para-choques nivelados com corpo // Para-brisas em duas partes e dividido por barra // Alça curta na tampa do compartimento de bagagem // Lanternas traseiras retangulares // Indicadores de direção dianteiro redondos e planos // Indicadores de direção traseiros redondos, abaixo das luzes traseiras // Iluminação da placa de matrícula e luzes de freio na caixa cromada acima da placa de matrícula Cabriolet: Capuz de tecido acolchoado com pequena janela traseira de vidro",
                 "porschei"));
+
+        builder.Entity<Porsche>().HasData(
+            new Porsche(1,"911 Carrera","283 kw/385 cv","4,0s", "porschecarrera"),
+            new Porsche(2,"911 Carrera", "283 kw/385 cv","4,0s", "porschecarrerat"));
 
         builder.Entity<ClassicCover>().HasData(
             new ClassicCover(

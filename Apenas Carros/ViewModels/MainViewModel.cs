@@ -14,6 +14,9 @@ public partial class MainViewModel : ObservableObject
     [ObservableProperty]
     ObservableCollection<ClassicCar> cars;
 
+    [ObservableProperty]
+    ObservableCollection<Porsche> porschesCarrera;
+
     public MainViewModel()
     {
         ListVeiculo();
@@ -25,5 +28,6 @@ public partial class MainViewModel : ObservableObject
 
         Covers = new ObservableCollection<ClassicCover>(dbContext.ClassicCovers);
         Cars = new ObservableCollection<ClassicCar>(dbContext.ClassicCars);
+        PorschesCarrera = new ObservableCollection<Porsche>(dbContext.Porsches);
     }
 }

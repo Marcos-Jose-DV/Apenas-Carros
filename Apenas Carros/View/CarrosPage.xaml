@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Apenas_Carros.View.CarrosPage"
+             Title="CarrosPage">
+    <Grid RowDefinitions="Auto, Auto">
+        
+        <Image Source="porschefundo" Aspect="AspectFill" />
+        <CarouselView ItemsSource="{Binding PorschesCarrera}" IndicatorView="IndicatorView">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <VerticalStackLayout>
+                        <Image Margin="0,52,0,0" Source="{Binding ImgCar}"/>
+                        <Label Text="{Binding Name}" TextColor="White"/>
+                    </VerticalStackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+        <IndicatorView
+            Grid.Row="1"
+             x:Name="IndicatorView" 
+             VerticalOptions="CenterAndExpand" 
+             HorizontalOptions="CenterAndExpand" 
+             Margin="0,-30,0,0" 
+             IndicatorColor="LightGrey" 
+             IndicatorSize="8" 
+             IndicatorsShape="Circle" 
+             SelectedIndicatorColor="#d5001c"/>
+    </Grid>
+</ContentPage>

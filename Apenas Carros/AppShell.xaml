@@ -4,11 +4,22 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Apenas_Carros"
+    xmlns:view="clr-namespace:Apenas_Carros.View"
     Shell.FlyoutBehavior="Disabled">
 
-    <ShellContent
+    <TabBar>
+        <Tab Title="Home" Route="MainPage">
+            <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
+        </Tab>
+        <Tab Title="Home" Route="CarrosPage">
+        <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate view:CarrosPage}"
+        Route="CarrosPage" />
+        </Tab>
+    </TabBar>
 
 </Shell>

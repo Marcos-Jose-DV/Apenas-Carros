@@ -1,5 +1,6 @@
 ﻿using Apenas_Carros.Data;
 using Apenas_Carros.Models;
+using Apenas_Carros.View;
 using Apenas_Carros.ViewModels;
 using Microsoft.Extensions.Logging;
 
@@ -20,6 +21,7 @@ public static class MauiProgram
 
 		builder.Services.AddSingleton<MainPage>();
         builder.Services.AddSingleton<MainViewModel>();
+		builder.Services.AddSingleton<CarrosPage>();
 
 		var dbContext = new AppDbContext();
 		dbContext.Database.EnsureCreated();
