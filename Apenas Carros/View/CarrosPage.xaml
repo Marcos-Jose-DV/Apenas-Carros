@@ -4,15 +4,17 @@
              x:Class="Apenas_Carros.View.CarrosPage"
              Title="CarrosPage">
     <Grid RowDefinitions="Auto, Auto">
-        
+
         <Image Source="porschefundo" Aspect="AspectFill" />
-        <CarouselView ItemsSource="{Binding PorschesCarrera}" IndicatorView="IndicatorView">
+        <CarouselView ItemsSource="{Binding PorschesCarrera}" IndicatorView="IndicatorView" >
             <CarouselView.ItemTemplate>
                 <DataTemplate>
-                    <VerticalStackLayout>
-                        <Image Margin="0,52,0,0" Source="{Binding ImgCar}"/>
-                        <Label Text="{Binding Name}" TextColor="White"/>
-                    </VerticalStackLayout>
+                    <Grid RowDefinitions="Auto, Auto, Auto" ColumnDefinitions="Auto,Auto">
+                        <Label Grid.Row="0" Grid.ColumnSpan="2" Text="{Binding Name}"  TextColor="White"/>
+                        <Image Grid.Row="1" Grid.ColumnSpan="2" Margin="50,0,0,0" Source="{Binding ImgCar}" WidthRequest="300" HeightRequest="200"/>
+                        <Label Grid.Row="2" Text="{Binding Detalhes1}" TextColor="White"/>
+                        <Label Grid.Row="2" Grid.Column="1" Text="{Binding Detalhes2}" TextColor="White"/>
+                    </Grid>
                 </DataTemplate>
             </CarouselView.ItemTemplate>
         </CarouselView>

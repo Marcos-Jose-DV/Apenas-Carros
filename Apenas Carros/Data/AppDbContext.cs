@@ -7,7 +7,7 @@ public class AppDbContext : DbContext
 {
     public DbSet<ClassicCover> ClassicCovers { get; set; }
     public DbSet<ClassicCar> ClassicCars { get; set; }
-    public DbSet<Porsche> Porsches { get; set; }    
+    public DbSet<Porsche> Porsches { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
@@ -17,12 +17,12 @@ public class AppDbContext : DbContext
     {
         builder.Entity<ClassicCar>().HasData(
             new ClassicCar(
-                1, 
-                "356/2 (Gmuend) (1948-50)", 
+                1,
+                "356/2 (Gmuend) (1948-50)",
                 "Corpo em alumínio // Pára-choques nivelados com a carroçaria // Pára-brisas em duas partes e dividido por barra // Logótipo  na tampa da bagageira // Trafficators em vez de indicadores de direcção (nos primeiros modelos) ",
                 "porschea"),
             new ClassicCar(
-                2, 
+                2,
                 "356 1100 (1950-54)",
                 "nivelados com a carroceria; separado da carroceria e com protetores de para-choque a partir de MY 1953 // Para-brisas em duas partes e dividido por barra; peça única com curvatura no centro (\"janela dobrada\") a partir de MY 1953 // Alça curta na tampa do compartimento de bagagem; longo e com crista a partir de MY 1954 // lanternas traseiras retangulares; rodada a partir de MY 1953 // Indicadores de direção dianteira redonda e plana; integrado na grade da buzina a partir do MY 1954 // Indicadores de direção traseiros redondos abaixo das lanternas traseiras; adjacentes às luzes traseiras a partir do MY 1953 // Iluminação da chapa de matrícula e luzes de travão em caixa cromada acima da placa de matrícula; luzes de freio integradas na lanterna traseira a partir do MY 1953 ",
                 "porscheb"),
@@ -35,7 +35,7 @@ public class AppDbContext : DbContext
                 4,
                 "356 1500 (1952)",
                 "Para-choques nivelados com corpo // Para-brisas em duas partes e dividido por barra // Alça curta na tampa do compartimento de bagagem // Lanternas traseiras retangulares // Indicadores de direção dianteiro redondos e planos // Indicadores de direção traseiros redondos, abaixo das luzes traseiras // Iluminação da placa de matrícula e luzes de freio na caixa cromada acima da placa de matrícula Cabriolet: Capuz de tecido acolchoado com pequena janela traseira de vidro",
-                "porschec"), 
+                "porschec"),
              new ClassicCar(
                  5,
                  "356 1500 (1953-55)"
@@ -68,8 +68,11 @@ public class AppDbContext : DbContext
                 "porschei"));
 
         builder.Entity<Porsche>().HasData(
-            new Porsche(1,"911 Carrera","283 kw/385 cv","4,0s", "porschecarrera"),
-            new Porsche(2,"911 Carrera", "283 kw/385 cv","4,0s", "porschecarrerat"));
+            new Porsche(1, "911 Carrera", "283 kw/385 cv", "4,0s", "porschecarrera"),
+            new Porsche(2, "911 Carrera T", "283 kw/385 cv", "4,0s", "porschecarrerat"),
+            new Porsche(3, "911 Carrera Cabriolet", "283 kw/385 cv", "4,2s", "porschecabriolet"),
+            new Porsche(4, "911 Carrera S", "331 kw/450 cv", "3,5s", "porsches"),
+            new Porsche(5, "911 Carrera s Cabriolet", "331 kw/450 cv", "3,7s", "porschecasbriolet"));
 
         builder.Entity<ClassicCover>().HasData(
             new ClassicCover(
